@@ -9,8 +9,14 @@ import java.util.List;
 
 public interface StudentService {
     public List<StudentEntity> getAllStudent() throws SpringBootMongoCrudException;
+
     public StudentEntity getSingleStudent(String id) throws SpringBootMongoCrudException;
-    public ResponseEntity createStudent(StudentEntity StudentEntity) throws URISyntaxException , SpringBootMongoCrudException;
+
+    public ResponseEntity createStudent(StudentEntity StudentEntity) throws URISyntaxException, SpringBootMongoCrudException;
+
     public ResponseEntity updateStudent(StudentEntity StudentEntity) throws SpringBootMongoCrudException;
+
     public ResponseEntity deleteStudent(String id) throws SpringBootMongoCrudException;
+
+    List<StudentEntity> getStudentByStatus(String status) throws SpringBootMongoCrudException;
 }
